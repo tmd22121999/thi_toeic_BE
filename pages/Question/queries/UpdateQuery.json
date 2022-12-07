@@ -83,7 +83,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"update\": \"question\",\n  \"updates\": [{\n    \"q\": { answer: ObjectId('{{data_table.selectedRow.answer}}') },\n    \"u\": {\n  $set:{{update_form.formData}}\n},\n    \"multi\": false\n}]\n}\n",
+            "data": "{\n  \"update\": \"question\",\n  \"updates\": [{\n    \"q\": { _id: ObjectId('{{data_table.selectedRow._id}}') },\n    \"u\": {\n  $set:{{update_form.formData}}\n},\n    \"multi\": false,\n  }]\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -94,7 +94,7 @@
         },
         "updateMany": {
           "query": {
-            "data": "{ answer: ObjectId('{{data_table.selectedRow.answer}}') }",
+            "data": "{ _id: ObjectId('{{data_table.selectedRow._id}}') }",
             "viewType": "component",
             "componentData": "{ answer: ObjectId('{{data_table.selectedRow.answer}}') }"
           },
@@ -112,10 +112,16 @@
       }
     },
     "executeOnLoad": false,
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.updateMany.query.data"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
+      "data_table.selectedRow._id",
       "data_table.selectedRow.answer",
       "update_col_1.text",
       "update_col_2.text",
