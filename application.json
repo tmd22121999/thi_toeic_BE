@@ -2,11 +2,11 @@
   "pages": [
     {
       "id": "Page1",
-      "isDefault": true
+      "isDefault": false
     },
     {
       "id": "Question",
-      "isDefault": false
+      "isDefault": true
     },
     {
       "id": "Users",
