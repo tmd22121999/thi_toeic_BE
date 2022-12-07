@@ -5575,7 +5575,7 @@
                       ],
                       "defaultImage": "https://assets.appsmith.com/widgets/default.png",
                       "key": "sfiotsbk4x",
-                      "image": "{{\"https://storage.googleapis.com/\"+update_form.formData.question.image}}",
+                      "image": "{{\"https://storage.googleapis.com/\"+update_formCopy.formData.question.image}}",
                       "isDeprecated": false,
                       "rightColumn": 63,
                       "objectFit": "cover",
